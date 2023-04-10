@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  csvserver:
+    volumes:
+      - ./inputFile:/csvserver/inputdata:z
+    env_file:
+      - csvserver.env
+    image: "docker.io/infracloudio/csvserver"
+    ports:
+      - "9393:9300"
